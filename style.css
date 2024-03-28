@@ -1,0 +1,145 @@
+:root {
+    /* Colors */
+    --black: rgba(0, 0, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+    --grey-light: rgba(192, 192, 192, 1);
+    --grey-dark: rgba(49, 49, 49, 1);
+    --orange: rgba(255, 165, 0, 1);
+}
+
+/* Styles for classes */
+.bg_orange {
+    background: var(--orange);
+}
+
+.bg_grey-dark {
+    background: var(--grey-dark);
+}
+
+.bg_grey-light {
+    background: var(--grey-light);
+}
+
+body {
+    background: var(--grey-light);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    background: var(--black);
+    padding: 20px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.calc-screen {
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    flex: 1 1 auto;
+    margin-bottom: 5px;
+}
+
+.calc-screen__p {
+    text-align: right;
+    font-size: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+}
+
+.calc-control {
+    display: grid;
+    grid-template-areas:
+        "c plus-minus percent division"
+        "seven eigth nine multi"
+        "four five six minus"
+        "one two three plus"
+        "zero zero dot equal ";
+    gap: 7px;
+    justify-items: center;
+}
+
+.btn {
+    height: 60px;
+    width: 60px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    color: var(--white);
+}
+
+.btn_zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.btn:hover {
+    filter: brightness(120%);
+}
+
+.btn:active {
+    filter: brightness(90%);
+}
+
+/* Adoptering for phones */
+
+@media screen and (max-width:440px) {
+    .calc {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: var(--black);
+        padding: 0px;
+        color: var(--white);
+        overflow-x: hidden;
+    }
+
+    .calc-control {
+        height: 60%;
+    }
+
+    .btn {
+        height: 75px;
+        width: 75px;
+    }
+
+    body {
+        background: var(--black);
+    }
+}
+
+@media screen and (max-width:385px) {
+    .btn {
+        height: 62px;
+        width: 62px;
+    }
+}

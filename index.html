@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="calc">
+                <div class="calc-screen">
+                    <p class="calc-screen__p"></p>
+                </div>
+                <div class="calc-control">
+                    <button class="clear btn bg_grey-light">C</button>
+                    <button data-value="+/-" class="negative btn bg_grey-light">+/-</button>
+                    <button data-value="%" class="percent sign btn bg_grey-light">%</button>
+                    <button data-value="/" class="btn sign bg_orange">/</button>
+
+                    <button data-value="7" class="btn numbers bg_grey-dark">7</button>
+                    <button data-value="8" class="btn numbers bg_grey-dark">8</button>
+                    <button data-value="9" class="btn numbers bg_grey-dark">9</button>
+                    <button data-value="X" class="sign btn bg_orange">X</button>
+
+                    <button data-value="4" class="btn numbers bg_grey-dark">4</button>
+                    <button data-value="5" class="btn numbers bg_grey-dark">5</button>
+                    <button data-value="6" class="btn  numbers bg_grey-dark">6</button>
+                    <button data-value="-" class="sign btn bg_orange">-</button>
+
+                    <button data-value="1" class="btn numbers bg_grey-dark">1</button>
+                    <button data-value="2" class="btn numbers bg_grey-dark">2</button>
+                    <button data-value="3" class="btn numbers bg_grey-dark">3</button>
+                    <button data-value="+" class="sign btn bg_orange">+</button>
+
+                    <button data-value="0" class="btn numbers btn_zero bg_grey-dark">0</button>
+                    <button data-value="." class="comma btn bg_grey-dark">.</button>
+                    <button data-value="=" class="equals btn bg_orange">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
